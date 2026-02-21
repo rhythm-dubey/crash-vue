@@ -3,21 +3,24 @@
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   <!-- <FirstComponent /> -->
   <!-- <ConditionalComponent /> -->
-  <PropertiesComponent />
+  <!-- <PropertiesComponent /> -->
+  <ParentComponent />
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 // import FirstComponent from './components/FirstComponent.vue'
 // import ConditionalComponent from './components/ConditionalComponent.vue'
-import PropertiesComponent from './components/PropertiesComponent.vue'
+// import PropertiesComponent from './components/PropertiesComponent.vue'
+import ParentComponent from './components/ParentComponent.vue'
 
 export default {
   name: 'App',
   components: {
     // FirstComponent
     // ConditionalComponent
-    PropertiesComponent
+    // PropertiesComponent
+    ParentComponent
     // HelloWorld
   }
 }
