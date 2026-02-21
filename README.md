@@ -1,6 +1,24 @@
-# Crash VUE
+# crash-vue
 
-### This project is crash course for the Vue JS Framework.
+## Project setup
+```
+npm install
+```
 
-** Quick start with CDN **
-* Used VUE JS CDN to create a minimal VUE JS page.*
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
