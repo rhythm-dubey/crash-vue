@@ -5,6 +5,7 @@
   <!-- <ConditionalComponent /> -->
   <!-- <PropertiesComponent /> -->
   <ParentComponent />
+  <EventParentComponent />
 </template>
 
 <script>
@@ -13,6 +14,7 @@
 // import ConditionalComponent from './components/ConditionalComponent.vue'
 // import PropertiesComponent from './components/PropertiesComponent.vue'
 import ParentComponent from './components/ParentComponent.vue'
+import EventParentComponent from './components/EventParentComponent.vue'
 
 export default {
   name: 'App',
@@ -20,7 +22,8 @@ export default {
     // FirstComponent
     // ConditionalComponent
     // PropertiesComponent
-    ParentComponent
+    ParentComponent,
+    EventParentComponent
     // HelloWorld
   }
 }
