@@ -4,8 +4,9 @@
   <!-- <FirstComponent /> -->
   <!-- <ConditionalComponent /> -->
   <!-- <PropertiesComponent /> -->
-  <ParentComponent />
-  <EventParentComponent />
+  <!-- <ParentComponent />
+  <EventParentComponent /> -->
+  <CounterComponent />
 </template>
 
 <script>
@@ -13,8 +14,9 @@
 // import FirstComponent from './components/FirstComponent.vue'
 // import ConditionalComponent from './components/ConditionalComponent.vue'
 // import PropertiesComponent from './components/PropertiesComponent.vue'
-import ParentComponent from './components/ParentComponent.vue'
-import EventParentComponent from './components/EventParentComponent.vue'
+// import ParentComponent from './components/ParentComponent.vue'
+// import EventParentComponent from './components/EventParentComponent.vue'
+import CounterComponent from './components/CounterComponent.vue'
 
 export default {
   name: 'App',
@@ -22,9 +24,10 @@ export default {
     // FirstComponent
     // ConditionalComponent
     // PropertiesComponent
-    ParentComponent,
-    EventParentComponent
+    // ParentComponent,
+    // EventParentComponent
     // HelloWorld
+    CounterComponent
   }
 }
 </script>
