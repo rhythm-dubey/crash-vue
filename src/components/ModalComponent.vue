@@ -1,53 +1,44 @@
 <template>
   <div>
-    <!-- Button -->
-    <button class="btn btn-primary" @click="openModal('Hello', 'This is dynamic content')">
+    <button class="btn btn-primary" @click="openModal">
       Open Modal
     </button>
 
-    <!-- Modal -->
-    <div class="modal fade show" tabindex="-1" style="display: block;" v-if="isOpen">
+    <div class="modal fade" id="myModal" ref="modalRef" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           
           <div class="modal-header">
-            <h5 class="modal-title">{{ modalData.title }}</h5>
-            <button class="btn-close" @click="closeModal"></button>
+            <h5 class="modal-title">Hello</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
 
           <div class="modal-body">
-            <p>{{ modalData.body }}</p>
-          </div>
-
-          <div class="modal-footer">
-            <button class="btn btn-secondary" @click="closeModal">Close</button>
+            <p>This is modal</p>
           </div>
 
         </div>
       </div>
     </div>
-
-    <!-- Backdrop -->
-    <div class="modal-backdrop fade show" v-if="isOpen"></div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { Modal } from 'bootstrap'
 
-const isOpen = ref(false)
+const modalRef = ref(null)
+let modalInstance = null
 
-const modalData = ref({
-  title: '',
-  body: ''
+onMounted(() => {
+  if (modalRef.value) {
+    modalInstance = new Modal(modalRef.value)
+  }
 })
 
-const openModal = (title, body) => {
-  modalData.value = { title, body }
-  isOpen.value = true
-}
-
-const closeModal = () => {
-  isOpen.value = false
+const openModal = () => {
+  if (modalInstance) {
+    modalInstance.show()
+  }
 }
 </script>
